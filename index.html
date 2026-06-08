@@ -657,6 +657,7 @@
     <div class="hidden md:flex items-center gap-8">
       <a href="#about" class="nav-link">About</a>
       <a href="#services" class="nav-link">Services</a>
+      <a href="projects.html" class="nav-link">Projects</a>
       <a href="#faqs" class="nav-link">FAQs</a>
       <a href="#contact" class="nav-link">Contact</a>
       <a href="#contact" class="btn-primary" style="padding:0.6rem 1.25rem;font-size:0.78rem;">Get a Quote</a>
@@ -680,6 +681,7 @@
   </button>
   <a href="#about" class="nav-link">About</a>
   <a href="#services" class="nav-link">Services</a>
+  <a href="projects.html" class="nav-link">Projects</a>
   <a href="#faqs" class="nav-link">FAQs</a>
   <a href="#contact" class="nav-link">Contact</a>
   <a href="#contact" class="btn-primary">Get a Quote</a>
@@ -1056,7 +1058,7 @@
           </div>
           <div>
             <div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.25rem;">Email</div>
-            <div style="font-size:0.92rem;color:var(--text-secondary);"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fe97909891be918c9d96979a9c878a9b8d91928b8a9791908dd09d9193">[email&#160;protected]</a></div>
+            <div style="font-size:0.92rem;color:var(--text-secondary);"><a href="mailto:info@orchidbyte-solutions.com.ng">info@orchidbyte-solutions.com.ng</a></div>
           </div>
         </div>
 
@@ -1066,7 +1068,7 @@
           </div>
           <div>
             <div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.25rem;">Phone</div>
-            <div style="font-size:0.92rem;color:var(--text-secondary);">Update with your number</div>
+            <div style="font-size:0.92rem;color:var(--text-secondary);">+234 903 551 5654</div>
           </div>
         </div>
 
@@ -1098,20 +1100,20 @@
             <div class="grid md:grid-cols-2 gap-4" style="margin-bottom:1rem;">
               <div>
                 <label style="display:block;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.5rem;">Full Name *</label>
-                <input type="text" class="contact-input" placeholder="Auwal Musa" required />
+                <input type="text" name="name" class="contact-input" placeholder="Auwal Musa" required />
               </div>
               <div>
                 <label style="display:block;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.5rem;">Email Address *</label>
-                <input type="email" class="contact-input" placeholder="hello@company.com" required />
+                <input type="email" name="email" class="contact-input" placeholder="hello@company.com" required />
               </div>
             </div>
             <div style="margin-bottom:1rem;">
               <label style="display:block;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.5rem;">Subject</label>
-              <input type="text" class="contact-input" placeholder="Web Development Project" />
+              <input type="text" name="subject" class="contact-input" placeholder="Web Development Project" />
             </div>
             <div style="margin-bottom:1.5rem;">
               <label style="display:block;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.5rem;">Message *</label>
-              <textarea class="contact-input" rows="5" placeholder="Tell us about your project..." required style="resize:vertical;min-height:130px;"></textarea>
+              <textarea name="message" class="contact-input" rows="5" placeholder="Tell us about your project..." required style="resize:vertical;min-height:130px;"></textarea>
             </div>
             <button type="submit" class="btn-primary" style="width:100%;font-size:0.85rem;padding:0.9rem;">
               Send Message
@@ -1162,6 +1164,7 @@
         <div style="display:flex;flex-direction:column;gap:0.7rem;">
           <a href="#about" style="color:var(--text-secondary);font-size:0.88rem;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--orchid-light)'" onmouseout="this.style.color='var(--text-secondary)'">About Us</a>
           <a href="#services" style="color:var(--text-secondary);font-size:0.88rem;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--orchid-light)'" onmouseout="this.style.color='var(--text-secondary)'">Services</a>
+          <a href="projects.html" style="color:var(--text-secondary);font-size:0.88rem;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--orchid-light)'" onmouseout="this.style.color='var(--text-secondary)'">Projects</a>
           <a href="#faqs" style="color:var(--text-secondary);font-size:0.88rem;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--orchid-light)'" onmouseout="this.style.color='var(--text-secondary)'">FAQs</a>
           <a href="#contact" style="color:var(--text-secondary);font-size:0.88rem;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--orchid-light)'" onmouseout="this.style.color='var(--text-secondary)'">Contact</a>
         </div>
@@ -1182,8 +1185,8 @@
     <div style="padding-top:2rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;">
       <p style="color:var(--text-muted);font-size:0.82rem;">© 2025 OrchidByte Solutions & General Services. All rights reserved.</p>
       <div style="display:flex;gap:1.5rem;">
-        <a href="#" style="color:var(--text-muted);font-size:0.78rem;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--orchid-light)'" onmouseout="this.style.color='var(--text-muted)'">Privacy Policy</a>
-        <a href="#" style="color:var(--text-muted);font-size:0.78rem;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--orchid-light)'" onmouseout="this.style.color='var(--text-muted)'">Terms of Service</a>
+        <a href="privacy-policy.html" style="color:var(--text-muted);font-size:0.78rem;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--orchid-light)'" onmouseout="this.style.color='var(--text-muted)'">Privacy Policy</a>
+        <a href="terms.html" style="color:var(--text-muted);font-size:0.78rem;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--orchid-light)'" onmouseout="this.style.color='var(--text-muted)'">Terms of Service</a>
       </div>
     </div>
   </div>
@@ -1265,4 +1268,33 @@
   // ── Contact form ──
   document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
-    const btn = this.querySelector('button[type="submit"]'
+    const form = this;
+    const btn  = form.querySelector('button[type="submit"]');
+    const originalText = btn.textContent;
+
+    btn.disabled    = true;
+    btn.textContent = 'Sending…';
+
+    const data = new FormData(form);
+
+    fetch('contact.php', { method: 'POST', body: data })
+      .then(function(res) { return res.json(); })
+      .then(function(json) {
+        if (json.success) {
+          form.style.display = 'none';
+          document.getElementById('form-success').style.display = 'block';
+        } else {
+          alert(json.message || 'Something went wrong. Please try again.');
+          btn.disabled    = false;
+          btn.textContent = originalText;
+        }
+      })
+      .catch(function() {
+        alert('Network error. Please check your connection and try again.');
+        btn.disabled    = false;
+        btn.textContent = originalText;
+      });
+  });
+</script>
+</body>
+</html>
