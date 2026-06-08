@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — OrchidByte Solutions</title>
+  <meta name="description" content="Terms and Conditions governing the use of OrchidByte Solutions' services and website." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --orchid: #b16fcf;
+      --orchid-light: #d4a0e8;
+      --orchid-glow: rgba(177, 111, 207, 0.18);
+      --orchid-border: rgba(177, 111, 207, 0.25);
+      --bg-deep: #0a0810;
+      --bg-card: #120f1a;
+      --text-primary: #f0eaf5;
+      --text-secondary: #a89bb8;
+      --text-muted: #6b5f7a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--bg-deep); color: var(--text-primary);
+      font-family: 'DM Sans', sans-serif; overflow-x: hidden;
+    }
+    h1, h2, h3 { font-family: 'Cormorant Garamond', serif; }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 9999; opacity: 0.4;
+    }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--bg-deep); }
+    ::-webkit-scrollbar-thumb { background: var(--orchid); border-radius: 2px; }
+
+    /* NAV */
+    #navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(10, 8, 16, 0.92); backdrop-filter: blur(20px);
+      box-shadow: 0 1px 0 var(--orchid-border); padding: 1rem 0;
+    }
+    .nav-inner {
+      max-width: 72rem; margin: 0 auto; padding: 0 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-link {
+      color: var(--text-secondary); font-size: 0.82rem; font-weight: 500;
+      letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: color 0.2s;
+    }
+    .nav-link:hover { color: var(--orchid-light); }
+    .btn-primary {
+      display: inline-block; background: var(--orchid); color: #fff;
+      font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none;
+      padding: 0.6rem 1.25rem; border-radius: 2px; border: none;
+    }
+
+    /* CONTENT */
+    .page-header {
+      padding: 8rem 0 4rem;
+      background: radial-gradient(ellipse 60% 40% at 50% 20%, rgba(177,111,207,0.08) 0%, transparent 70%), var(--bg-deep);
+    }
+    .container { max-width: 72rem; margin: 0 auto; padding: 0 1.5rem; }
+    .content-layout {
+      display: grid; grid-template-columns: 220px 1fr; gap: 4rem; padding: 4rem 0;
+    }
+    @media (max-width: 768px) {
+      .content-layout { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+    }
+
+    /* SIDEBAR TOC */
+    .sidebar { position: sticky; top: 6rem; align-self: start; }
+    .toc-title {
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--orchid); margin-bottom: 1rem;
+    }
+    .toc-link {
+      display: block; color: var(--text-muted); font-size: 0.82rem;
+      text-decoration: none; padding: 0.35rem 0; transition: color 0.2s;
+      border-left: 2px solid transparent; padding-left: 0.75rem; margin-left: -2px;
+    }
+    .toc-link:hover { color: var(--orchid-light); border-left-color: var(--orchid); }
+
+    /* DOCUMENT CONTENT */
+    .doc-content { color: var(--text-secondary); }
+    .doc-meta {
+      display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 3rem;
+      padding-bottom: 2rem; border-bottom: 1px solid var(--orchid-border);
+    }
+    .doc-meta-item { font-size: 0.82rem; }
+    .doc-meta-label { color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.72rem; margin-bottom: 0.2rem; }
+
+    .section-block { margin-bottom: 3rem; scroll-margin-top: 6rem; }
+    .section-number {
+      display: inline-block; font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.15em; text-transform: uppercase; color: var(--orchid);
+      margin-bottom: 0.6rem;
+    }
+    .section-heading {
+      font-size: 1.6rem; font-weight: 600; color: var(--text-primary);
+      margin-bottom: 1.25rem; line-height: 1.2;
+    }
+    .doc-content p { font-size: 0.92rem; line-height: 1.85; margin-bottom: 1rem; }
+    .doc-content ul { margin: 0.75rem 0 1rem 1.25rem; }
+    .doc-content ul li { font-size: 0.92rem; line-height: 1.8; margin-bottom: 0.4rem; }
+    .doc-content strong { color: var(--text-primary); font-weight: 600; }
+    .doc-divider { height: 1px; background: rgba(177,111,207,0.12); margin: 2.5rem 0; }
+
+    .highlight-box {
+      background: var(--orchid-glow); border: 1px solid var(--orchid-border);
+      border-radius: 4px; padding: 1.25rem 1.5rem; margin: 1.5rem 0;
+    }
+    .highlight-box p { margin-bottom: 0; color: var(--text-primary); font-size: 0.9rem; }
+
+    footer { border-top: 1px solid rgba(177,111,207,0.12); padding: 2.5rem 0; }
+    .footer-inner {
+      max-width: 72rem; margin: 0 auto; padding: 0 1.5rem;
+      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;
+    }
+
+    /* Mobile nav */
+    #mobile-menu {
+      display: none; position: fixed; inset: 0;
+      background: rgba(10,8,16,0.97); backdrop-filter: blur(20px);
+      z-index: 999; flex-direction: column; align-items: center;
+      justify-content: center; gap: 2.5rem;
+    }
+    #mobile-menu.open { display: flex; }
+    #mobile-menu .nav-link { font-size: 1.1rem; }
+  </style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" style="text-decoration:none;display:flex;align-items:center;">
+      <svg height="40" viewBox="0 0 270 40" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(19, 20) scale(0.29)">
+          <line x1="0" y1="-24" x2="0" y2="-44" stroke="#b16fcf" stroke-width="1.4" stroke-linecap="round"/>
+          <line x1="0" y1="24" x2="0" y2="44" stroke="#b16fcf" stroke-width="1.4" stroke-linecap="round"/>
+          <line x1="-24" y1="0" x2="-44" y2="0" stroke="#b16fcf" stroke-width="1.4" stroke-linecap="round"/>
+          <line x1="24" y1="0" x2="44" y2="0" stroke="#b16fcf" stroke-width="1.4" stroke-linecap="round"/>
+          <rect x="-24" y="-24" width="48" height="48" rx="6" fill="#1a0e28" stroke="#b16fcf" stroke-width="1.5"/>
+          <circle cx="0" cy="0" r="4.5" fill="#b16fcf"/><circle cx="0" cy="0" r="2" fill="#fff"/>
+        </g>
+        <text x="44" y="16" font-family="Cormorant Garamond, Georgia, serif" font-size="18" font-weight="700" fill="#f0eaf5" letter-spacing="0.5">OrchidByte</text>
+        <text x="44" y="31" font-family="DM Sans, sans-serif" font-size="6.5" font-weight="400" fill="#b16fcf" letter-spacing="2.5">SOLUTIONS</text>
+      </svg>
+    </a>
+    <div id="desktop-links" style="display:flex;align-items:center;gap:2rem;">
+      <a href="index.html#about" class="nav-link">About</a>
+      <a href="index.html#services" class="nav-link">Services</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="index.html#contact" class="nav-link">Contact</a>
+      <a href="index.html#contact" class="btn-primary">Get a Quote</a>
+    </div>
+    <button id="menu-toggle" style="display:none;background:none;border:none;cursor:pointer;" aria-label="Menu">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+        <line x1="2" y1="6" x2="20" y2="6" stroke="var(--text-primary)" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="2" y1="11" x2="20" y2="11" stroke="var(--text-primary)" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="2" y1="16" x2="20" y2="16" stroke="var(--text-primary)" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<div id="mobile-menu">
+  <button id="menu-close" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;cursor:pointer;color:var(--text-secondary);">
+    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg>
+  </button>
+  <a href="index.html#about" class="nav-link">About</a>
+  <a href="index.html#services" class="nav-link">Services</a>
+  <a href="projects.html" class="nav-link">Projects</a>
+  <a href="index.html#contact" class="nav-link">Contact</a>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="container">
+    <span style="display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--orchid);margin-bottom:1rem;">Legal</span>
+    <h1 style="font-size:clamp(2.5rem,5vw,4rem);font-weight:600;line-height:1.1;margin-bottom:1rem;">Terms of Service</h1>
+    <p style="color:var(--text-secondary);font-size:0.95rem;max-width:560px;line-height:1.7;">
+      Please read these terms carefully before engaging our services or using our website. By proceeding, you agree to be bound by these terms.
+    </p>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+  <div class="content-layout">
+    <!-- Sidebar TOC -->
+    <aside class="sidebar">
+      <div class="toc-title">Contents</div>
+      <a href="#definitions" class="toc-link">1. Definitions</a>
+      <a href="#acceptance" class="toc-link">2. Acceptance of Terms</a>
+      <a href="#services" class="toc-link">3. Services</a>
+      <a href="#engagement" class="toc-link">4. Engagement & Payments</a>
+      <a href="#ip" class="toc-link">5. Intellectual Property</a>
+      <a href="#confidentiality" class="toc-link">6. Confidentiality</a>
+      <a href="#liability" class="toc-link">7. Limitation of Liability</a>
+      <a href="#warranties" class="toc-link">8. Warranties & Disclaimers</a>
+      <a href="#termination" class="toc-link">9. Termination</a>
+      <a href="#disputes" class="toc-link">10. Disputes & Governing Law</a>
+      <a href="#changes" class="toc-link">11. Changes to Terms</a>
+      <a href="#contact-legal" class="toc-link">12. Contact</a>
+    </aside>
+
+    <!-- Document -->
+    <main class="doc-content">
+      <div class="doc-meta">
+        <div class="doc-meta-item">
+          <div class="doc-meta-label">Last Updated</div>
+          <div>30 May 2025</div>
+        </div>
+        <div class="doc-meta-item">
+          <div class="doc-meta-label">Effective Date</div>
+          <div>30 May 2025</div>
+        </div>
+        <div class="doc-meta-item">
+          <div class="doc-meta-label">Jurisdiction</div>
+          <div>Federal Republic of Nigeria</div>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <p><strong>Summary:</strong> These Terms govern all engagements between OrchidByte Solutions & General Services and its clients. They apply to our website, all service agreements, and any software or platforms we deliver. If something is unclear, please contact us before proceeding.</p>
+      </div>
+
+      <!-- 1. Definitions -->
+      <div class="section-block" id="definitions">
+        <span class="section-number">Section 01</span>
+        <h2 class="section-heading">Definitions</h2>
+        <p>In these Terms, the following definitions apply:</p>
+        <ul>
+          <li><strong>"Company", "We", "Us", "Our"</strong> — OrchidByte Solutions & General Services, a technology and IT services company operating in Kano, Nigeria, reachable at info@orchidbyte-solutions.com.ng.</li>
+          <li><strong>"Client", "You", "Your"</strong> — Any individual, business, government agency, or organisation that engages our services, accesses our website, or enters into a service agreement with us.</li>
+          <li><strong>"Services"</strong> — All IT services, software development, cybersecurity, network management, support, and consultancy offered by the Company, whether described on our website or agreed in a separate Statement of Work (SOW).</li>
+          <li><strong>"Deliverable"</strong> — Any product, software, report, design, code, documentation, or output produced by the Company for the Client.</li>
+          <li><strong>"SOW" / "Agreement"</strong> — A separate written Statement of Work or service agreement between the Company and the Client that specifies scope, timeline, and fees.</li>
+          <li><strong>"Website"</strong> — The Company's website at https://orchidbyte-solutions.com.ng and all associated subdomains.</li>
+        </ul>
+      </div>
+      <div class="doc-divider"></div>
+
+      <!-- 2. Acceptance -->
+      <div class="section-block" id="acceptance">
+        <span class="section-number">Section 02</span>
+        <h2 class="section-heading">Acceptance of Terms</h2>
+        <p>By accessing our Website, submitting an inquiry, signing a service agreement, or making any payment to the Company, you confirm that:</p>
+        <ul>
+          <li>You have read, understood, and agree to be bound by these Terms of Service.</li>
+          <li>You have the legal capacity and authority to enter into binding contracts under Nigerian law.</li>
+          <li>If engaging on behalf of an organisation, you have the authority to bind that organisation.</li>
+        </ul>
+        <p>These Terms apply in addition to any specific SOW or engagement letter. In the event of a conflict, the specific SOW takes precedence over these general Terms.</p>
+      </div>
+      <div class="doc-divider"></div>
+
+      <!-- 3. Services -->
+      <div class="section-block" id="services">
+        <span class="section-number">Section 03</span>
+        <h2 class="section-heading">Services</h2>
+        <p>The Company provides a range of IT services including, but not limited to: web and mobile application development, network installation and monitoring, cybersecurity audits and managed security, IT support and helpdesk services, cloud infrastructure setup, systems troubleshooting and maintenance, and digital consultancy.</p>
+        <p>All services are provided as described in a mutually agreed SOW. The Company reserves the right to:</p>
+        <ul>
+          <li>Decline any engagement at its discretion, without obligation to provide reasons.</li>
+          <li>Subcontract portions of work to qualified third parties, while retaining responsibility for the final deliverable.</li>
+          <li>Modify service offerings on the Website at any time without prior notice.</li>
+        </ul>
+        <p>All timelines stated in proposals are estimates. Delays caused by the Client — including delayed provision of content, approvals, or access credentials — will extend agreed timelines accordingly. The Company is not liable for delays caused by third-party services (hosting, payment APIs, telecommunications, etc.).</p>
+      </div>
+      <div class="doc-divider"></div>
+
+      <!-- 4. Engagement & Payments -->
+      <div class="section-block" id="engagement">
+        <span class="section-number">Section 04</span>
+        <h2 class="section-heading">Engagement & Payments</h2>
+        <p><strong>Commencement:</strong> Work commences only upon receipt of a signed SOW and any required deposit payment. Verbal or email agreements alone do not constitute a binding engagement.</p>
+        <p><strong>Pricing:</strong> All fees are quoted in Nigerian Naira (₦) unless otherwise stated. Prices are exclusive of applicable taxes. The Company reserves the right to revise pricing for ongoing or new projects due to changes in scope or market conditions, with reasonable notice.</p>
+        <p><strong>Payment Schedule:</strong> Unless otherwise agreed in writing:</p>
+        <ul>
+          <li>A deposit of <strong>50%</strong> of the total project fee is due before work commences.</li>
+          <li>The remaining balance is due upon project delivery and before final handover of files or access credentials.</li>
+          <li>For retainer engagements, invoices are issued monthly in advance and due within 7 days.</li>
+        </ul>
+        <p><strong>Late Payments:</strong> Invoices unpaid after 14 days of the due date attract a late fee of 2% per month on the outstanding balance. The Company reserves the right to suspend work until overdue balances are settled.</p>
+        <p><strong>Refunds:</strong> Deposits are non-refundable once work has commenced. If the Company fails to deliver materially as agreed, a partial or full refund may be negotiated in writing. Change-of-mind cancellations after commencement are not eligible for refund of work already completed.</p>
+        <p><strong>Scope Changes:</strong> Any changes to agreed scope after a SOW is signed must be documented and may attract additional charges. The Company will provide a revised quote before proceeding with out-of-scope work.</p>
+      </div>
+      <div class="doc-divider"></div>
+
+      <!-- 5. Intellectual Property -->
+      <div class="section-block" id="ip">
+        <span class="section-number">Section 05</span>
+        <h2 class="section-heading">Intellectual Property</h2>
+        <p><strong>Client Materials:</strong> Any content, data, logos, trademarks, or materials supplied by the Client remain the intellectual property of the Client. The Client grants the Company a limited licence to use such materials solely for the purpose of delivering the agreed services.</p>
+        <p><strong>Deliverables:</strong> Upon receipt of full payment, ownership of custom deliverables produced specifically for the Client (code, designs, documentation) transfers to the Client, unless otherwise stated in the SOW.</p>
+        <p><strong>Pre-existing IP:</strong> Any tools, frameworks, libraries, templates, or proprietary systems developed by the Company prior to or independently of the engagement remain the sole property of the Company. The Client receives a perpetual, non-exclusive licence to use such components within the delivered product.</p>
+        <p><strong>Portfolio Rights:</strong> The Company reserves the right to feature completed work in its portfolio, website, and marketing materials unless the Client expressly requests confidentiality in writing.</p>
+        <p><strong>Open Source:</strong> Deliverables may incorporate open-source components. The Client agrees to comply with applicable open-source licences.</p>
+      </div>
+      <div class="doc-divider"></div>
+
+      <!-- 6. Confidentiality -->
+      <div class="section-block" id="confidentiality">
+        <span class="section-number">Section 06</span>
+        <h2 class="section-heading">Confidentiality</h2>
+        <p>Both parties agree to treat all non-public information exchanged in connection with an engagement as confidential ("Confidential Information"). This includes business strategies, technical specifications, pricing, user data, and any information marked as confidential.</p>
+        <p>Neither party shall disclose Confidential Information to third parties without prior written consent, except:</p>
+        <ul>
+          <li>As required by applicable Nigerian law or court order.</li>
+          <li>To employees or subcontractors who need to know it to perform agreed services, subject to equivalent confidentiality obligations.</li>
+          <li>If the information is already publicly available through no fault of the receiving party.</li>
+        </ul>
+        <p>Confidentiality obligations survive the termination or completion of any engagement for a period of <strong>3 years</strong>.</p>
+      </div>
+      <div class="doc-divider"></div>
+
+      <!-- 7. Limitation of Liability -->
+      <div class="section-block" id="liability">
+        <span class="section-number">Section 07</span>
+        <h2 class="section-heading">Limitation of Liability</h2>
+        <p>To the maximum extent permitted under Nigerian law:</p>
+        <ul>
+          <li>The Company's total liability to the Client for any claim arising from a specific engagement shall not exceed the total fees paid by the Client for that engagement in the 3 months preceding the claim.</li>
+          <li>The Company is not liable for any indirect, incidental, consequential, special, or punitive damages, including loss of revenue, loss of data, loss of business opportunity, or reputational harm — even if advised of the possibility of such damages.</li>
+          <li>The Company is not liable for failures caused by third-party services (hosting providers, payment processors, APIs, internet connectivity, or telecommunications infrastructure).</li>
+          <li>The Company is not liable for losses resulting from the Client's failure to maintain adequate backups, security practices, or software updates after project handover.</li>
+        </ul>
+        <p>Nothing in these Terms limits liability for fraud, wilful misconduct, or death and personal injury caused by the Company's negligence.</p>
+      </div>
+      <div class="doc-divider"></div>
+
+      <!-- 8. Warranties -->
+      <div class="section-block" id="warranties">
+        <span class="section-number">Section 08</span>
+        <h2 class="section-heading">Warranties & Disclaimers</h2>
+        <p>The Company warrants that:</p>
+        <ul>
+          <li>Services will be performed with reasonable skill and care, consistent with professional industry standards.</li>
+          <li>Deliverables will materially conform to the specifications agreed in the SOW at the time of delivery.</li>
+          <li>A <strong>30-day bug-fix warranty</strong> applies to all custom software deliverables from the date of final handover. Issues arising from changes made by the Client or third parties after handover are excluded.</li>
+        </ul>
+        <p>The Company does not warrant that:</p>
+        <ul>
+          <li>The Website or any delivered software will be uninterrupted, error-free, or completely secure at all times.</li>
+          <li>Results of IT services (such as cybersecurity audits or SEO work) will achieve any specific business outcome.</li>
+          <li>Third-party integrations will remain stable or maintain their APIs over time.</li>
+        </ul>
+        <p>The Website and any free resources provided are offered on an "as-is" basis without any warranty of any kind.</p>
+      </div>
+      <div class="doc-divider"></div>
+
+      <!-- 9. Termination -->
+      <div class="section-block" id="termination">
+        <span class="section-number">Section 09</span>
+        <h2 class="section-heading">Termination</h2>
+        <p><strong>By the Client:</strong> The Client may terminate an engagement by providing 14 days' written notice. The Client remains liable for all fees for work completed up to the termination date, plus any costs already incurred by the Company on the Client's behalf (e.g., third-party licences, hosting). The deposit is non-refundable.</p>
+        <p><strong>By the Company:</strong> The Company may terminate an engagement immediately and without liability if:</p>
+        <ul>
+          <li>The Client breaches any material term of these Terms or a SOW and fails to remedy the breach within 7 days of notice.</li>
+          <li>The Client fails to make payment on time.</li>
+          <li>The Client engages in unlawful, abusive, or fraudulent conduct.</li>
+          <li>Continuing the engagement would require the Company to act unlawfully.</li>
+        </ul>
+        <p><strong>Effect of Termination:</strong> On termination, all licences granted to the Client to use unreleased deliverables cease immediately. The Company will deliver to the Client all completed work up to the termination date, in exchange for payment of outstanding fees.</p>
+      </div>
+      <div class="doc-divider"></div>
+
+      <!-- 10. Disputes -->
+      <div class="section-block" id="disputes">
+        <span class="section-number">Section 10</span>
+        <h2 class="section-heading">Disputes & Governing Law</h2>
+        <p>These Terms are governed by and construed in accordance with the laws of the <strong>Federal Republic of Nigeria</strong>, including but not limited to the Nigerian Contract Act and relevant provisions of the Companies and Allied Matters Act (CAMA).</p>
+        <p><strong>Resolution Process:</strong></p>
+        <ul>
+          <li><strong>Step 1 — Negotiation:</strong> Either party may raise a dispute in writing. Both parties agree to attempt good-faith resolution within 14 days.</li>
+          <li><strong>Step 2 — Mediation:</strong> If negotiation fails, the parties agree to submit the dispute to a mutually agreed mediator in Kano, Nigeria within 30 days.</li>
+          <li><strong>Step 3 — Arbitration / Litigation:</strong> Unresolved disputes shall be referred to arbitration under the Arbitration and Conciliation Act of Nigeria, or litigated in the courts of Kano State, Nigeria.</li>
+        </ul>
+        <p>The parties waive any right to commence proceedings in any other jurisdiction, except for urgent injunctive relief.</p>
+      </div>
+      <div class="doc-divider"></div>
+
+      <!-- 11. Changes -->
+      <div class="section-block" id="changes">
+        <span class="section-number">Section 11</span>
+        <h2 class="section-heading">Changes to Terms</h2>
+        <p>The Company reserves the right to update these Terms at any time. When material changes are made, we will update the "Last Updated" date at the top of this page. Where possible, we will notify active clients of significant changes by email.</p>
+        <p>Your continued use of our Website or services after changes are posted constitutes acceptance of the updated Terms. If you do not agree to the revised Terms, you should cease using our services and notify us in writing.</p>
+        <p>Changes do not retroactively affect existing signed SOWs, which remain governed by the Terms in effect at the time of signing.</p>
+      </div>
+      <div class="doc-divider"></div>
+
+      <!-- 12. Contact -->
+      <div class="section-block" id="contact-legal">
+        <span class="section-number">Section 12</span>
+        <h2 class="section-heading">Contact</h2>
+        <p>For questions, concerns, or notices relating to these Terms, please contact us:</p>
+        <ul>
+          <li><strong>Email:</strong> info@orchidbyte-solutions.com.ng</li>
+          <li><strong>Website:</strong> https://orchidbyte-solutions.com.ng</li>
+          <li><strong>Address:</strong> OrchidByte Solutions & General Services, Kano, Nigeria</li>
+        </ul>
+        <p>All legal notices must be submitted in writing to the email above and will be acknowledged within 5 business days.</p>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <p style="color:var(--text-muted);font-size:0.82rem;">© 2025 OrchidByte Solutions & General Services. All rights reserved.</p>
+    <div style="display:flex;gap:1.5rem;flex-wrap:wrap;">
+      <a href="index.html" style="color:var(--text-muted);font-size:0.78rem;text-decoration:none;" onmouseover="this.style.color='var(--orchid-light)'" onmouseout="this.style.color='var(--text-muted)'">Home</a>
+      <a href="privacy-policy.html" style="color:var(--text-muted);font-size:0.78rem;text-decoration:none;" onmouseover="this.style.color='var(--orchid-light)'" onmouseout="this.style.color='var(--text-muted)'">Privacy Policy</a>
+      <a href="terms.html" style="color:var(--orchid-light);font-size:0.78rem;text-decoration:none;">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function checkNav() {
+    const d = window.innerWidth >= 768;
+    document.getElementById('desktop-links').style.display = d ? 'flex' : 'none';
+    document.getElementById('menu-toggle').style.display = d ? 'none' : 'block';
+  }
+  checkNav(); window.addEventListener('resize', checkNav);
+  const mm = document.getElementById('mobile-menu');
+  document.getElementById('menu-toggle').addEventListener('click', () => mm.classList.add('open'));
+  document.getElementById('menu-close').addEventListener('click', () => mm.classList.remove('open'));
+</script>
+</body>
+</html>
