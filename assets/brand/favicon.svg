@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      :root {
+        --tile-bg: #060b14;
+        --tile-border: #1e3a5f;
+        --chip-body: #0c1829;
+        --chip-stroke: #38bdf8;
+        --bus-line: #2563eb;
+        --bus-outer: #38bdf8;
+        --node: #38bdf8;
+        --center-dot: #ffffff;
+      }
+      @media (prefers-color-scheme: light) {
+        :root {
+          --tile-bg: #f8fafc;
+          --tile-border: #94a3b8;
+          --chip-body: #ffffff;
+          --chip-stroke: #0284c7;
+          --bus-line: #2563eb;
+          --bus-outer: #0284c7;
+          --node: #0284c7;
+          --center-dot: #0f172a;
+        }
+      }
+    </style>
+    <linearGradient id="tileGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1322"/>
+      <stop offset="100%" stop-color="#050a12"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background App Tile -->
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="var(--tile-bg)" stroke="var(--tile-border)" stroke-width="1.5"/>
+
+  <!-- Centered Semiconductor Processor Emblem -->
+  <g transform="translate(32, 32) scale(0.38)">
+    <!-- Orbit Ring -->
+    <circle cx="0" cy="0" r="58" fill="none" stroke="var(--bus-outer)" stroke-width="1.5" stroke-dasharray="3.5 3.5" opacity="0.45"/>
+
+    <!-- Cardinal Traces -->
+    <line x1="0" y1="-24" x2="0" y2="-45" stroke="var(--bus-line)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="0" y1="-45" x2="0" y2="-58" stroke="var(--bus-outer)" stroke-width="2" stroke-linecap="round"/>
+    <line x1="0" y1="24" x2="0" y2="45" stroke="var(--bus-line)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="0" y1="45" x2="0" y2="58" stroke="var(--bus-outer)" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-24" y1="0" x2="-45" y2="0" stroke="var(--bus-line)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="-45" y1="0" x2="-58" y2="0" stroke="var(--bus-outer)" stroke-width="2" stroke-linecap="round"/>
+    <line x1="24" y1="0" x2="45" y2="0" stroke="var(--bus-line)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="45" y1="0" x2="58" y2="0" stroke="var(--bus-outer)" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Diagonal Traces -->
+    <line x1="17" y1="-17" x2="41" y2="-41" stroke="var(--bus-line)" stroke-width="2.2" stroke-linecap="round" opacity="0.8"/>
+    <line x1="17" y1="17" x2="41" y2="41" stroke="var(--bus-line)" stroke-width="2.2" stroke-linecap="round" opacity="0.8"/>
+    <line x1="-17" y1="-17" x2="-41" y2="-41" stroke="var(--bus-line)" stroke-width="2.2" stroke-linecap="round" opacity="0.8"/>
+    <line x1="-17" y1="17" x2="-41" y2="41" stroke="var(--bus-line)" stroke-width="2.2" stroke-linecap="round" opacity="0.8"/>
+
+    <!-- Nodes -->
+    <circle cx="0" cy="-45" r="3.5" fill="var(--bus-line)"/>
+    <circle cx="0" cy="45" r="3.5" fill="var(--bus-line)"/>
+    <circle cx="-45" cy="0" r="3.5" fill="var(--bus-line)"/>
+    <circle cx="45" cy="0" r="3.5" fill="var(--bus-line)"/>
+
+    <circle cx="0" cy="-58" r="5" fill="var(--node)"/>
+    <circle cx="0" cy="58" r="5" fill="var(--node)"/>
+    <circle cx="-58" cy="0" r="5" fill="var(--node)"/>
+    <circle cx="58" cy="0" r="5" fill="var(--node)"/>
+    <circle cx="41" cy="-41" r="4" fill="var(--node)"/>
+    <circle cx="41" cy="41" r="4" fill="var(--node)"/>
+    <circle cx="-41" cy="-41" r="4" fill="var(--node)"/>
+    <circle cx="-41" cy="41" r="4" fill="var(--node)"/>
+
+    <!-- 16 CPU External Leads (4 per side) -->
+    <!-- Top Leads -->
+    <rect x="-18" y="-28" width="5" height="5" rx="1" fill="var(--bus-line)"/>
+    <rect x="-7" y="-28" width="5" height="5" rx="1" fill="var(--bus-line)"/>
+    <rect x="2.5" y="-28" width="5" height="5" rx="1" fill="var(--bus-line)"/>
+    <rect x="13.5" y="-28" width="5" height="5" rx="1" fill="var(--bus-line)"/>
+    <!-- Bottom Leads -->
+    <rect x="-18" y="23" width="5" height="5" rx="1" fill="var(--bus-line)"/>
+    <rect x="-7" y="23" width="5" height="5" rx="1" fill="var(--bus-line)"/>
+    <rect x="2.5" y="23" width="5" height="5" rx="1" fill="var(--bus-line)"/>
+    <rect x="13.5" y="23" width="5" height="5" rx="1" fill="var(--bus-line)"/>
+    <!-- Left Leads -->
+    <rect x="-28" y="-18" width="5" height="5" rx="1" fill="var(--bus-line)"/>
+    <rect x="-28" y="-7" width="5" height="5" rx="1" fill="var(--bus-line)"/>
+    <rect x="-28" y="2.5" width="5" height="5" rx="1" fill="var(--bus-line)"/>
+    <rect x="-28" y="13.5" width="5" height="5" rx="1" fill="var(--bus-line)"/>
+    <!-- Right Leads -->
+    <rect x="23" y="-18" width="5" height="5" rx="1" fill="var(--bus-line)"/>
+    <rect x="23" y="-7" width="5" height="5" rx="1" fill="var(--bus-line)"/>
+    <rect x="23" y="2.5" width="5" height="5" rx="1" fill="var(--bus-line)"/>
+    <rect x="23" y="13.5" width="5" height="5" rx="1" fill="var(--bus-line)"/>
+
+    <!-- CPU Chip Body -->
+    <rect x="-24" y="-24" width="48" height="48" rx="8" fill="var(--chip-body)" stroke="var(--chip-stroke)" stroke-width="2.5"/>
+
+    <!-- Silicon Quad Cores -->
+    <rect x="-16" y="-16" width="9" height="9" rx="1.5" fill="var(--chip-stroke)" opacity="0.6"/>
+    <rect x="7" y="-16" width="9" height="9" rx="1.5" fill="var(--chip-stroke)" opacity="0.6"/>
+    <rect x="-16" y="7" width="9" height="9" rx="1.5" fill="var(--chip-stroke)" opacity="0.6"/>
+    <rect x="7" y="7" width="9" height="9" rx="1.5" fill="var(--chip-stroke)" opacity="0.6"/>
+
+    <!-- Central Quantum Core -->
+    <circle cx="0" cy="0" r="6" fill="var(--node)"/>
+    <circle cx="0" cy="0" r="2.8" fill="var(--center-dot)"/>
+  </g>
+</svg>
