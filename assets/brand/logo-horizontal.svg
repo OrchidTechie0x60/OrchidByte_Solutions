@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 60" fill="none">
+  <!-- Central Tech Processor Emblem -->
+  <g transform="translate(30, 30) scale(0.42)">
+    <!-- Concentric Orbit Ring -->
+    <circle cx="0" cy="0" r="58" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 3.5" opacity="0.35"/>
+    
+    <!-- 8 Radial Bus Traces -->
+    <!-- Cardinal Traces -->
+    <line x1="0" y1="-24" x2="0" y2="-45" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="0" y1="-45" x2="0" y2="-58" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity="0.6"/>
+    <line x1="0" y1="24" x2="0" y2="45" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="0" y1="45" x2="0" y2="58" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity="0.6"/>
+    <line x1="-24" y1="0" x2="-45" y2="0" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="-45" y1="0" x2="-58" y2="0" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity="0.6"/>
+    <line x1="24" y1="0" x2="45" y2="0" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="45" y1="0" x2="58" y2="0" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity="0.6"/>
+    
+    <!-- Diagonal Traces -->
+    <line x1="17" y1="-17" x2="41" y2="-41" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0.75"/>
+    <line x1="17" y1="17" x2="41" y2="41" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0.75"/>
+    <line x1="-17" y1="-17" x2="-41" y2="-41" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0.75"/>
+    <line x1="-17" y1="17" x2="-41" y2="41" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0.75"/>
+    
+    <!-- Inner Nodes -->
+    <circle cx="0" cy="-45" r="3.2" fill="currentColor"/>
+    <circle cx="0" cy="45" r="3.2" fill="currentColor"/>
+    <circle cx="-45" cy="0" r="3.2" fill="currentColor"/>
+    <circle cx="45" cy="0" r="3.2" fill="currentColor"/>
+    
+    <!-- Outer Orbit Nodes -->
+    <circle cx="0" cy="-58" r="4.2" fill="#38bdf8"/>
+    <circle cx="0" cy="58" r="4.2" fill="#38bdf8"/>
+    <circle cx="-58" cy="0" r="4.2" fill="#38bdf8"/>
+    <circle cx="58" cy="0" r="4.2" fill="#38bdf8"/>
+    <circle cx="41" cy="-41" r="3.5" fill="#38bdf8" opacity="0.85"/>
+    <circle cx="41" cy="41" r="3.5" fill="#38bdf8" opacity="0.85"/>
+    <circle cx="-41" cy="-41" r="3.5" fill="#38bdf8" opacity="0.85"/>
+    <circle cx="-41" cy="41" r="3.5" fill="#38bdf8" opacity="0.85"/>
+    
+    <!-- 16 CPU External Leads (4 per side) -->
+    <!-- Top Leads -->
+    <rect x="-18" y="-27" width="4.5" height="4" rx="1" fill="currentColor"/>
+    <rect x="-7" y="-27" width="4.5" height="4" rx="1" fill="currentColor"/>
+    <rect x="2.5" y="-27" width="4.5" height="4" rx="1" fill="currentColor"/>
+    <rect x="13.5" y="-27" width="4.5" height="4" rx="1" fill="currentColor"/>
+    <!-- Bottom Leads -->
+    <rect x="-18" y="23" width="4.5" height="4" rx="1" fill="currentColor"/>
+    <rect x="-7" y="23" width="4.5" height="4" rx="1" fill="currentColor"/>
+    <rect x="2.5" y="23" width="4.5" height="4" rx="1" fill="currentColor"/>
+    <rect x="13.5" y="23" width="4.5" height="4" rx="1" fill="currentColor"/>
+    <!-- Left Leads -->
+    <rect x="-27" y="-18" width="4" height="4.5" rx="1" fill="currentColor"/>
+    <rect x="-27" y="-7" width="4" height="4.5" rx="1" fill="currentColor"/>
+    <rect x="-27" y="2.5" width="4" height="4.5" rx="1" fill="currentColor"/>
+    <rect x="-27" y="13.5" width="4" height="4.5" rx="1" fill="currentColor"/>
+    <!-- Right Leads -->
+    <rect x="23" y="-18" width="4" height="4.5" rx="1" fill="currentColor"/>
+    <rect x="23" y="-7" width="4" height="4.5" rx="1" fill="currentColor"/>
+    <rect x="23" y="2.5" width="4" height="4.5" rx="1" fill="currentColor"/>
+    <rect x="23" y="13.5" width="4" height="4.5" rx="1" fill="currentColor"/>
+    
+    <!-- CPU Chip Body -->
+    <rect x="-24" y="-24" width="48" height="48" rx="7" fill="#0c1829" stroke="currentColor" stroke-width="2.2"/>
+    
+    <!-- Silicon Quad Cores -->
+    <rect x="-16" y="-16" width="9" height="9" rx="1.5" fill="#38bdf8" opacity="0.6"/>
+    <rect x="7" y="-16" width="9" height="9" rx="1.5" fill="#38bdf8" opacity="0.6"/>
+    <rect x="-16" y="7" width="9" height="9" rx="1.5" fill="#38bdf8" opacity="0.6"/>
+    <rect x="7" y="7" width="9" height="9" rx="1.5" fill="#38bdf8" opacity="0.6"/>
+    
+    <!-- Central Quantum Core -->
+    <circle cx="0" cy="0" r="5.5" fill="#38bdf8"/>
+    <circle cx="0" cy="0" r="2.8" fill="#ffffff"/>
+  </g>
+
+  <!-- Wordmark & Subtitle -->
+  <text x="68" y="28" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="22" font-weight="800" letter-spacing="-0.3" fill="var(--text-primary, #f8fafc)">OrchidByte</text>
+  <circle cx="188" cy="18" r="4.5" fill="none" stroke="currentColor" stroke-width="0.8" opacity="0.7"/>
+  <text x="188" y="20.5" font-family="'Plus Jakarta Sans', sans-serif" font-size="5" font-weight="700" text-anchor="middle" fill="currentColor" opacity="0.8">R</text>
+  
+  <text x="69" y="44" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="7.2" font-weight="700" letter-spacing="2.2" fill="var(--brand-accent-text, #38bdf8)">SOLUTIONS &amp; GENERAL SERVICES</text>
+  <line x1="69" y1="50" x2="280" y2="50" stroke="var(--brand-accent-text, #38bdf8)" stroke-width="0.75" opacity="0.35"/>
+</svg>
+

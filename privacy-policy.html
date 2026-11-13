@@ -1,478 +1,251 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy — OrchidByte Solutions</title>
-  <meta name="description" content="How OrchidByte Solutions collects, uses, and protects your personal data in compliance with Nigeria's NDPR." />
+  <title>Privacy Policy — OrchidByte Solutions &amp; General Services</title>
+  <meta name="description" content="Privacy Policy governing personal data collection, processing, and NDPR compliance at OrchidByte Solutions &amp; General Services (CAC BN: 9343571)." />
+  
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --orchid: #b16fcf;
-      --orchid-light: #d4a0e8;
-      --orchid-glow: rgba(177, 111, 207, 0.18);
-      --orchid-border: rgba(177, 111, 207, 0.25);
-      --bg-deep: #0a0810;
-      --bg-card: #120f1a;
-      --text-primary: #f0eaf5;
-      --text-secondary: #a89bb8;
-      --text-muted: #6b5f7a;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      background-color: var(--bg-deep); color: var(--text-primary);
-      font-family: 'DM Sans', sans-serif; overflow-x: hidden;
-    }
-    h1, h2, h3 { font-family: 'Cormorant Garamond', serif; }
-    body::before {
-      content: ''; position: fixed; inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
-      pointer-events: none; z-index: 9999; opacity: 0.4;
-    }
-    ::-webkit-scrollbar { width: 4px; }
-    ::-webkit-scrollbar-track { background: var(--bg-deep); }
-    ::-webkit-scrollbar-thumb { background: var(--orchid); border-radius: 2px; }
-
-    #navbar {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-      background: rgba(10, 8, 16, 0.92); backdrop-filter: blur(20px);
-      box-shadow: 0 1px 0 var(--orchid-border); padding: 1rem 0;
-    }
-    .nav-inner {
-      max-width: 72rem; margin: 0 auto; padding: 0 1.5rem;
-      display: flex; align-items: center; justify-content: space-between;
-    }
-    .nav-link {
-      color: var(--text-secondary); font-size: 0.82rem; font-weight: 500;
-      letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: color 0.2s;
-    }
-    .nav-link:hover { color: var(--orchid-light); }
-    .btn-primary {
-      display: inline-block; background: var(--orchid); color: #fff;
-      font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 600;
-      letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none;
-      padding: 0.6rem 1.25rem; border-radius: 2px; border: none;
-    }
-    #mobile-menu {
-      display: none; position: fixed; inset: 0;
-      background: rgba(10,8,16,0.97); backdrop-filter: blur(20px);
-      z-index: 999; flex-direction: column; align-items: center;
-      justify-content: center; gap: 2.5rem;
-    }
-    #mobile-menu.open { display: flex; }
-    #mobile-menu .nav-link { font-size: 1.1rem; }
-
-    .page-header {
-      padding: 8rem 0 4rem;
-      background: radial-gradient(ellipse 60% 40% at 50% 20%, rgba(177,111,207,0.08) 0%, transparent 70%), var(--bg-deep);
-    }
-    .container { max-width: 72rem; margin: 0 auto; padding: 0 1.5rem; }
-    .content-layout {
-      display: grid; grid-template-columns: 220px 1fr; gap: 4rem; padding: 4rem 0;
-    }
-    @media (max-width: 768px) {
-      .content-layout { grid-template-columns: 1fr; }
-      .sidebar { display: none; }
-    }
-    .sidebar { position: sticky; top: 6rem; align-self: start; }
-    .toc-title {
-      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.15em;
-      text-transform: uppercase; color: var(--orchid); margin-bottom: 1rem;
-    }
-    .toc-link {
-      display: block; color: var(--text-muted); font-size: 0.82rem;
-      text-decoration: none; padding: 0.35rem 0 0.35rem 0.75rem; transition: color 0.2s;
-      border-left: 2px solid transparent; margin-left: -2px;
-    }
-    .toc-link:hover { color: var(--orchid-light); border-left-color: var(--orchid); }
-
-    .doc-content { color: var(--text-secondary); }
-    .doc-meta {
-      display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 3rem;
-      padding-bottom: 2rem; border-bottom: 1px solid var(--orchid-border);
-    }
-    .doc-meta-item { font-size: 0.82rem; }
-    .doc-meta-label {
-      color: var(--text-muted); text-transform: uppercase;
-      letter-spacing: 0.1em; font-size: 0.72rem; margin-bottom: 0.2rem;
-    }
-    .section-block { margin-bottom: 3rem; scroll-margin-top: 6rem; }
-    .section-number {
-      display: inline-block; font-size: 0.72rem; font-weight: 600;
-      letter-spacing: 0.15em; text-transform: uppercase; color: var(--orchid); margin-bottom: 0.6rem;
-    }
-    .section-heading {
-      font-size: 1.6rem; font-weight: 600; color: var(--text-primary);
-      margin-bottom: 1.25rem; line-height: 1.2;
-    }
-    .doc-content p { font-size: 0.92rem; line-height: 1.85; margin-bottom: 1rem; }
-    .doc-content ul { margin: 0.75rem 0 1rem 1.25rem; }
-    .doc-content ul li { font-size: 0.92rem; line-height: 1.8; margin-bottom: 0.4rem; }
-    .doc-content strong { color: var(--text-primary); font-weight: 600; }
-    .doc-divider { height: 1px; background: rgba(177,111,207,0.12); margin: 2.5rem 0; }
-    .highlight-box {
-      background: var(--orchid-glow); border: 1px solid var(--orchid-border);
-      border-radius: 4px; padding: 1.25rem 1.5rem; margin: 1.5rem 0;
-    }
-    .highlight-box p { margin-bottom: 0; color: var(--text-primary); font-size: 0.9rem; }
-
-    .rights-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; margin: 1.5rem 0;
-    }
-    .right-card {
-      background: var(--bg-card); border: 1px solid var(--orchid-border);
-      border-radius: 4px; padding: 1.25rem;
-    }
-    .right-card-title {
-      font-family: 'Cormorant Garamond', serif; font-size: 1.1rem;
-      font-weight: 600; color: var(--orchid-light); margin-bottom: 0.4rem;
-    }
-    .right-card p { font-size: 0.82rem; line-height: 1.65; margin-bottom: 0; }
-
-    footer { border-top: 1px solid rgba(177,111,207,0.12); padding: 2.5rem 0; }
-    .footer-inner {
-      max-width: 72rem; margin: 0 auto; padding: 0 1.5rem;
-      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body>
 
+<!-- Floating WhatsApp Quick-Connect -->
+<a href="https://wa.me/2348156661246?text=Hello%20OrchidByte%20Solutions%2C%20I%20have%20an%20inquiry%20regarding%20your%20services" 
+   class="whatsapp-float" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   aria-label="Direct WhatsApp Consultation with Senior Engineer">
+  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+  </svg>
+  <span>Direct WhatsApp</span>
+</a>
+
+<!-- Navbar -->
 <nav id="navbar">
-  <div class="nav-inner">
-    <a href="index.html" style="text-decoration:none;display:flex;align-items:center;">
-      <svg height="40" viewBox="0 0 270 40" xmlns="http://www.w3.org/2000/svg">
-        <g transform="translate(19, 20) scale(0.29)">
-          <line x1="0" y1="-24" x2="0" y2="-44" stroke="#b16fcf" stroke-width="1.4" stroke-linecap="round"/>
-          <line x1="0" y1="24" x2="0" y2="44" stroke="#b16fcf" stroke-width="1.4" stroke-linecap="round"/>
-          <line x1="-24" y1="0" x2="-44" y2="0" stroke="#b16fcf" stroke-width="1.4" stroke-linecap="round"/>
-          <line x1="24" y1="0" x2="44" y2="0" stroke="#b16fcf" stroke-width="1.4" stroke-linecap="round"/>
-          <rect x="-24" y="-24" width="48" height="48" rx="6" fill="#1a0e28" stroke="#b16fcf" stroke-width="1.5"/>
-          <circle cx="0" cy="0" r="4.5" fill="#b16fcf"/><circle cx="0" cy="0" r="2" fill="#fff"/>
+  <div class="container flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-2" style="text-decoration:none;" aria-label="OrchidByte Solutions Home">
+      <svg height="40" viewBox="0 0 320 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(30, 30) scale(0.42)">
+          <circle cx="0" cy="0" r="58" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 3.5" opacity="0.35"/>
+          <line x1="0" y1="-24" x2="0" y2="-45" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="0" y1="24" x2="0" y2="45" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="-24" y1="0" x2="-45" y2="0" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="24" y1="0" x2="45" y2="0" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          <circle cx="0" cy="-58" r="4.2" fill="#38bdf8"/>
+          <circle cx="0" cy="58" r="4.2" fill="#38bdf8"/>
+          <rect x="-24" y="-24" width="48" height="48" rx="7" fill="var(--bg-surface)" stroke="currentColor" stroke-width="2.2"/>
+          <circle cx="0" cy="0" r="5.5" fill="#38bdf8"/>
         </g>
-        <text x="44" y="16" font-family="Cormorant Garamond, Georgia, serif" font-size="18" font-weight="700" fill="#f0eaf5" letter-spacing="0.5">OrchidByte</text>
-        <text x="44" y="31" font-family="DM Sans, sans-serif" font-size="6.5" font-weight="400" fill="#b16fcf" letter-spacing="2.5">SOLUTIONS</text>
+        <text x="68" y="28" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="22" font-weight="800" fill="currentColor">OrchidByte</text>
+        <text x="69" y="44" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="7.2" font-weight="700" letter-spacing="2.2" fill="var(--brand-accent-text)">SOLUTIONS &amp; GENERAL SERVICES</text>
       </svg>
     </a>
-    <div id="desktop-links" style="display:flex;align-items:center;gap:2rem;">
+
+    <div class="hidden md:flex items-center gap-8">
       <a href="index.html#about" class="nav-link">About</a>
       <a href="index.html#services" class="nav-link">Services</a>
       <a href="projects.html" class="nav-link">Projects</a>
+      <a href="index.html#faqs" class="nav-link">FAQs</a>
       <a href="index.html#contact" class="nav-link">Contact</a>
-      <a href="index.html#contact" class="btn-primary">Get a Quote</a>
+      
+      <button id="theme-toggle" class="btn-theme-toggle" aria-label="Toggle theme">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/></svg>
+      </button>
+
+      <a href="index.html#contact" class="btn-primary" style="padding:0.6rem 1.35rem;font-size:0.8rem;">Request a Proposal</a>
     </div>
-    <button id="menu-toggle" style="display:none;background:none;border:none;cursor:pointer;" aria-label="Menu">
-      <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-        <line x1="2" y1="6" x2="20" y2="6" stroke="var(--text-primary)" stroke-width="1.5" stroke-linecap="round"/>
-        <line x1="2" y1="11" x2="20" y2="11" stroke="var(--text-primary)" stroke-width="1.5" stroke-linecap="round"/>
-        <line x1="2" y1="16" x2="20" y2="16" stroke="var(--text-primary)" stroke-width="1.5" stroke-linecap="round"/>
-      </svg>
-    </button>
+
+    <div class="flex items-center gap-2 md:hidden">
+      <button id="theme-toggle-mobile" class="btn-theme-toggle" aria-label="Toggle theme">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/></svg>
+      </button>
+      <button id="menu-toggle" class="btn-icon" aria-label="Open Navigation Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
   </div>
 </nav>
 
-<div id="mobile-menu">
-  <button id="menu-close" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;cursor:pointer;color:var(--text-secondary);">
-    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg>
-  </button>
-  <a href="index.html#about" class="nav-link">About</a>
-  <a href="index.html#services" class="nav-link">Services</a>
-  <a href="projects.html" class="nav-link">Projects</a>
-  <a href="index.html#contact" class="nav-link">Contact</a>
-</div>
+<!-- Mobile Navigation Drawer -->
+<div id="mobile-menu" aria-label="Mobile Navigation Drawer">
+  <div>
+    <div class="mobile-menu-header">
+      <div style="font-weight:800;font-size:1.15rem;color:var(--text-primary);display:flex;align-items:center;gap:0.5rem;">
+        <span style="color:var(--brand-cyan);">●</span> OrchidByte Solutions
+      </div>
+      <button id="menu-close" class="btn-icon" aria-label="Close menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg>
+      </button>
+    </div>
 
-<div class="page-header">
-  <div class="container">
-    <span style="display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--orchid);margin-bottom:1rem;">Legal</span>
-    <h1 style="font-size:clamp(2.5rem,5vw,4rem);font-weight:600;line-height:1.1;margin-bottom:1rem;">Privacy Policy</h1>
-    <p style="color:var(--text-secondary);font-size:0.95rem;max-width:560px;line-height:1.7;">
-      Your privacy matters to us. This policy explains how we collect, use, store, and protect your personal data — in compliance with Nigeria's Data Protection Regulation (NDPR).
-    </p>
+    <div class="mobile-menu-links">
+      <a href="index.html" class="nav-link"><span>Home</span> <span>→</span></a>
+      <a href="index.html#about" class="nav-link"><span>About Company</span> <span>→</span></a>
+      <a href="index.html#services" class="nav-link"><span>Services</span> <span>→</span></a>
+      <a href="projects.html" class="nav-link"><span>Projects Portfolio</span> <span>→</span></a>
+      <a href="index.html#faqs" class="nav-link"><span>Frequently Asked</span> <span>→</span></a>
+      <a href="index.html#contact" class="nav-link"><span>Contact Us</span> <span>→</span></a>
+    </div>
+  </div>
+
+  <div class="mobile-menu-footer">
+    <a href="index.html#contact" class="btn-primary" style="width:100%;">Request a Proposal</a>
+    <a href="https://wa.me/2348156661246" class="btn-outline" style="width:100%;" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+    <div style="text-align:center;padding-top:0.5rem;">
+      <span class="badge-cac" style="font-size:0.72rem;">CAC Nigeria BN: 9343571</span>
+    </div>
   </div>
 </div>
 
+<!-- Page Header -->
+<header class="page-header">
+  <div class="container">
+    <span class="section-eyebrow">Legal &amp; Compliance</span>
+    <h1 class="hero-title" style="font-size:clamp(2.5rem, 5vw, 4rem);margin-bottom:1rem;">Privacy Policy</h1>
+    <p style="font-size:1.05rem;max-width:620px;line-height:1.75;">
+      Your data protection rights. This policy explains how OrchidByte Solutions collects, processes, and protects your information in accordance with Nigeria's Data Protection Act (NDPR).
+    </p>
+  </div>
+</header>
+
+<!-- Main Content Layout -->
 <div class="container">
   <div class="content-layout">
+    <!-- Sidebar Table of Contents -->
     <aside class="sidebar">
-      <div class="toc-title">Contents</div>
-      <a href="#who-we-are" class="toc-link">1. Who We Are</a>
-      <a href="#data-collected" class="toc-link">2. Data We Collect</a>
-      <a href="#how-we-collect" class="toc-link">3. How We Collect It</a>
-      <a href="#lawful-basis" class="toc-link">4. Lawful Basis</a>
-      <a href="#how-we-use" class="toc-link">5. How We Use Your Data</a>
-      <a href="#sharing" class="toc-link">6. Sharing Your Data</a>
-      <a href="#retention" class="toc-link">7. Data Retention</a>
-      <a href="#security" class="toc-link">8. Security</a>
-      <a href="#your-rights" class="toc-link">9. Your Rights</a>
-      <a href="#cookies" class="toc-link">10. Cookies</a>
-      <a href="#children" class="toc-link">11. Children's Privacy</a>
-      <a href="#third-party" class="toc-link">12. Third-Party Links</a>
-      <a href="#updates" class="toc-link">13. Policy Updates</a>
-      <a href="#contact-privacy" class="toc-link">14. Contact Us</a>
+      <div class="toc-title">Index</div>
+      <a href="#overview" class="toc-link">1. Overview</a>
+      <a href="#controller" class="toc-link">2. Data Controller</a>
+      <a href="#collection" class="toc-link">3. Data We Collect</a>
+      <a href="#usage" class="toc-link">4. How We Use Data</a>
+      <a href="#legal-basis" class="toc-link">5. Legal Basis (NDPR)</a>
+      <a href="#retention" class="toc-link">6. Data Retention</a>
+      <a href="#security" class="toc-link">7. Security Measures</a>
+      <a href="#sharing" class="toc-link">8. Data Sharing</a>
+      <a href="#rights" class="toc-link">9. Your NDPR Rights</a>
+      <a href="#cookies" class="toc-link">10. Cookies Policy</a>
+      <a href="#contact-privacy" class="toc-link">11. Contact &amp; Inquiries</a>
     </aside>
 
+    <!-- Document Body -->
     <main class="doc-content">
       <div class="doc-meta">
-        <div class="doc-meta-item">
-          <div class="doc-meta-label">Last Updated</div>
-          <div>30 May 2025</div>
-        </div>
-        <div class="doc-meta-item">
+        <div>
           <div class="doc-meta-label">Effective Date</div>
-          <div>30 May 2025</div>
+          <div style="font-weight:600;">30 May 2025</div>
         </div>
-        <div class="doc-meta-item">
-          <div class="doc-meta-label">Regulation</div>
-          <div>NDPR 2019 (Nigeria)</div>
+        <div>
+          <div class="doc-meta-label">Jurisdiction</div>
+          <div style="font-weight:600;">Federal Republic of Nigeria</div>
+        </div>
+        <div>
+          <div class="doc-meta-label">Entity Verification</div>
+          <div style="font-weight:600;color:var(--brand-cyan);">CAC BN: 9343571</div>
         </div>
       </div>
 
       <div class="highlight-box">
-        <p><strong>Key takeaway:</strong> We only collect data we genuinely need, we never sell it, and you have the right to access, correct, or delete it at any time by emailing info@orchidbyte-solutions.com.ng.</p>
+        <p><strong>NDPR Compliance Commitment:</strong> OrchidByte Solutions &amp; General Services processes all client data in strict conformity with the Nigeria Data Protection Act and international best practices for data sovereignty and confidentiality.</p>
       </div>
 
-      <!-- 1 -->
-      <div class="section-block" id="who-we-are">
+      <!-- Section 1 -->
+      <div class="section-block" id="overview">
         <span class="section-number">Section 01</span>
-        <h2 class="section-heading">Who We Are</h2>
-        <p><strong>OrchidByte Solutions & General Services</strong> ("Company", "we", "us") is an IT services and technology company based in Kano, Nigeria. We operate the website at https://orchidbyte-solutions.com.ng and provide IT services to clients across Nigeria.</p>
-        <p>For the purposes of the Nigeria Data Protection Regulation (NDPR) 2019, the Company is the <strong>Data Controller</strong> responsible for your personal data. Our designated contact for data protection matters is reachable at info@orchidbyte-solutions.com.ng.</p>
+        <h2 class="section-heading">Overview</h2>
+        <p>This Privacy Policy applies to personal data collected through our website (https://orchidbyte-solutions.com.ng), our software platforms (e.g. SchoolSync, GovTrack), and all client advisory services provided by OrchidByte Solutions &amp; General Services.</p>
       </div>
       <div class="doc-divider"></div>
 
-      <!-- 2 -->
-      <div class="section-block" id="data-collected">
+      <!-- Section 2 -->
+      <div class="section-block" id="controller">
         <span class="section-number">Section 02</span>
-        <h2 class="section-heading">Data We Collect</h2>
-        <p>We may collect the following categories of personal data:</p>
+        <h2 class="section-heading">Data Controller</h2>
+        <p>OrchidByte Solutions &amp; General Services operates as the Data Controller under the Nigeria Data Protection Regulation:</p>
         <ul>
-          <li><strong>Identity Data:</strong> Full name, organisation name, job title.</li>
-          <li><strong>Contact Data:</strong> Email address, phone number, physical address.</li>
-          <li><strong>Technical Data:</strong> IP address, browser type and version, device type, operating system, pages visited, time and date of visit, referring URL, and session duration — collected automatically via server logs and analytics tools.</li>
-          <li><strong>Communications Data:</strong> The content of messages you send us via our contact form, email, or other channels.</li>
-          <li><strong>Transaction Data:</strong> Payment details, invoice records, and project history for clients who engage our services. Note: We do not store full payment card numbers — payments are processed through third-party providers.</li>
-          <li><strong>Marketing Data:</strong> Your preferences regarding receiving marketing communications from us.</li>
+          <li><strong>Entity:</strong> OrchidByte Solutions &amp; General Services</li>
+          <li><strong>Registration:</strong> Corporate Affairs Commission Nigeria (BN: 9343571)</li>
+          <li><strong>Headquarters:</strong> Kano State, Nigeria</li>
+          <li><strong>Official Inquiries:</strong> info@orchidbyte-solutions.com.ng</li>
         </ul>
-        <p>We do not intentionally collect sensitive personal data (such as health information, biometric data, or religious beliefs) unless specifically required for a contracted service, and only with your explicit consent.</p>
       </div>
       <div class="doc-divider"></div>
 
-      <!-- 3 -->
-      <div class="section-block" id="how-we-collect">
+      <!-- Section 3 -->
+      <div class="section-block" id="collection">
         <span class="section-number">Section 03</span>
-        <h2 class="section-heading">How We Collect Your Data</h2>
-        <p>We collect data through the following means:</p>
+        <h2 class="section-heading">Data We Collect</h2>
+        <p>We only collect data necessary to respond to your technical requests and deliver software services:</p>
         <ul>
-          <li><strong>Directly from you:</strong> When you fill out our contact form, request a quote, sign a service agreement, correspond with us by email or phone, or engage our services.</li>
-          <li><strong>Automatically:</strong> When you visit our Website, our server and analytics tools collect technical data such as your IP address, browser information, and pages viewed.</li>
-          <li><strong>From third parties:</strong> We may receive data from referrals, business partners, or publicly available professional profiles (such as LinkedIn) where you have made your information available.</li>
+          <li><strong>Contact Information:</strong> Name, work email address, telephone/WhatsApp number, and organization name.</li>
+          <li><strong>Project Specifications:</strong> Technical briefs, infrastructure requirements, and budget ranges submitted via our proposal forms.</li>
+          <li><strong>Technical Metadata:</strong> IP address, browser type, and anonymous access timestamps for server security logging.</li>
         </ul>
       </div>
       <div class="doc-divider"></div>
 
-      <!-- 4 -->
-      <div class="section-block" id="lawful-basis">
-        <span class="section-number">Section 04</span>
-        <h2 class="section-heading">Lawful Basis for Processing</h2>
-        <p>Under the NDPR 2019, we process your personal data on the following lawful bases:</p>
-        <ul>
-          <li><strong>Consent:</strong> Where you have given us clear consent to process your data for a specific purpose (e.g., subscribing to updates).</li>
-          <li><strong>Contract Performance:</strong> Processing necessary to fulfil a service agreement with you or to take steps at your request before entering into an agreement.</li>
-          <li><strong>Legitimate Interests:</strong> Processing necessary for our legitimate business interests — such as improving our services, managing our website, communicating with prospects, and preventing fraud — where those interests are not overridden by your rights.</li>
-          <li><strong>Legal Obligation:</strong> Where processing is required to comply with Nigerian law (e.g., FIRS tax requirements, CAMA obligations).</li>
-        </ul>
-      </div>
-      <div class="doc-divider"></div>
-
-      <!-- 5 -->
-      <div class="section-block" id="how-we-use">
-        <span class="section-number">Section 05</span>
-        <h2 class="section-heading">How We Use Your Data</h2>
-        <p>We use your personal data only for the following purposes:</p>
-        <ul>
-          <li>To respond to enquiries and provide quotes for services.</li>
-          <li>To deliver, manage, and improve the IT services you have engaged us for.</li>
-          <li>To process payments and maintain financial records.</li>
-          <li>To communicate project updates, schedules, and support.</li>
-          <li>To send relevant service information or case studies where you have consented or where we have a legitimate interest.</li>
-          <li>To analyse Website usage and improve user experience (using anonymised or aggregated data where possible).</li>
-          <li>To detect, investigate, and prevent fraud or security incidents.</li>
-          <li>To comply with legal and regulatory obligations.</li>
-        </ul>
-        <p>We will not use your data for automated decision-making or profiling that produces legal or similarly significant effects without your explicit consent.</p>
-      </div>
-      <div class="doc-divider"></div>
-
-      <!-- 6 -->
-      <div class="section-block" id="sharing">
-        <span class="section-number">Section 06</span>
-        <h2 class="section-heading">Sharing Your Data</h2>
-        <p>We do not sell, rent, or trade your personal data. We may share it in the following limited circumstances:</p>
-        <ul>
-          <li><strong>Service Providers:</strong> Trusted third-party vendors who assist us in delivering services — such as hosting providers, payment processors (e.g., Flutterwave, Paystack), email services, and analytics tools. These parties are contractually bound to protect your data and use it only for specified purposes.</li>
-          <li><strong>Professional Advisers:</strong> Lawyers, auditors, or accountants, subject to professional confidentiality obligations.</li>
-          <li><strong>Regulatory Authorities:</strong> Nigerian regulatory bodies including NITDA, FIRS, or law enforcement agencies where required by law or court order.</li>
-          <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of business assets, your data may be transferred — and you will be notified.</li>
-        </ul>
-        <p>We ensure any third party we share data with maintains adequate data protection standards consistent with the NDPR.</p>
-      </div>
-      <div class="doc-divider"></div>
-
-      <!-- 7 -->
-      <div class="section-block" id="retention">
-        <span class="section-number">Section 07</span>
-        <h2 class="section-heading">Data Retention</h2>
-        <p>We retain your personal data only for as long as necessary for the purposes described in this Policy, or as required by law. Our general retention periods are:</p>
-        <ul>
-          <li><strong>Client records (contracts, invoices, project files):</strong> 7 years after the end of the engagement, in line with Nigerian tax and accounting requirements.</li>
-          <li><strong>Contact form enquiries (non-clients):</strong> 2 years from the date of last contact.</li>
-          <li><strong>Website analytics data:</strong> 24 months on a rolling basis.</li>
-          <li><strong>Marketing consents and preferences:</strong> Until you withdraw consent or 3 years of inactivity, whichever is sooner.</li>
-        </ul>
-        <p>After the applicable retention period, data is securely deleted or anonymised.</p>
-      </div>
-      <div class="doc-divider"></div>
-
-      <!-- 8 -->
-      <div class="section-block" id="security">
-        <span class="section-number">Section 08</span>
-        <h2 class="section-heading">Security</h2>
-        <p>We implement appropriate technical and organisational measures to protect your personal data against unauthorised access, loss, destruction, or alteration. These include:</p>
-        <ul>
-          <li>SSL/TLS encryption for data in transit on our Website.</li>
-          <li>Access controls and role-based permissions on internal systems.</li>
-          <li>Regular security reviews and vulnerability assessments.</li>
-          <li>Staff awareness of data protection responsibilities.</li>
-        </ul>
-        <p>While we strive to protect your data, no method of electronic transmission or storage is 100% secure. In the event of a data breach that is likely to result in risk to your rights and freedoms, we will notify you and the relevant Nigerian authority (NITDA) within 72 hours of becoming aware, as required by the NDPR.</p>
-      </div>
-      <div class="doc-divider"></div>
-
-      <!-- 9 -->
-      <div class="section-block" id="your-rights">
+      <!-- Section 9: Rights -->
+      <div class="section-block" id="rights">
         <span class="section-number">Section 09</span>
-        <h2 class="section-heading">Your Rights</h2>
-        <p>Under the NDPR 2019, you have the following rights regarding your personal data:</p>
+        <h2 class="section-heading">Your NDPR Rights</h2>
+        <p>Under Nigerian data protection law, you possess enforceable rights over your personal data:</p>
+        
         <div class="rights-grid">
           <div class="right-card">
-            <div class="right-card-title">Right of Access</div>
-            <p>Request a copy of the personal data we hold about you.</p>
+            <div class="right-card-title">Right to Access</div>
+            <p>Request verification and copies of any personal data we hold.</p>
           </div>
           <div class="right-card">
             <div class="right-card-title">Right to Rectification</div>
-            <p>Request correction of inaccurate or incomplete data.</p>
+            <p>Request correction of inaccurate or incomplete records.</p>
           </div>
           <div class="right-card">
             <div class="right-card-title">Right to Erasure</div>
-            <p>Request deletion of your data where we have no compelling reason to continue processing it.</p>
-          </div>
-          <div class="right-card">
-            <div class="right-card-title">Right to Object</div>
-            <p>Object to processing based on legitimate interests, including direct marketing.</p>
-          </div>
-          <div class="right-card">
-            <div class="right-card-title">Right to Restriction</div>
-            <p>Request that we limit how we use your data in certain circumstances.</p>
+            <p>Request deletion of your data when no longer legally required.</p>
           </div>
           <div class="right-card">
             <div class="right-card-title">Right to Portability</div>
-            <p>Receive your data in a structured, machine-readable format.</p>
-          </div>
-          <div class="right-card">
-            <div class="right-card-title">Right to Withdraw Consent</div>
-            <p>Withdraw consent at any time where processing is based on consent.</p>
-          </div>
-          <div class="right-card">
-            <div class="right-card-title">Right to Complain</div>
-            <p>Lodge a complaint with NITDA (Nigeria's data protection authority) at nitda.gov.ng.</p>
+            <p>Receive your information in a structured, machine-readable format.</p>
           </div>
         </div>
-        <p>To exercise any of these rights, email us at info@orchidbyte-solutions.com.ng with the subject line "Data Rights Request". We will respond within 30 days. We do not charge a fee for reasonable requests.</p>
+        <p>To exercise any of these rights, transmit a written notice to <strong>info@orchidbyte-solutions.com.ng</strong> with the subject line <em>"Data Rights Request"</em>. Responses are provided within 30 days without fee.</p>
       </div>
       <div class="doc-divider"></div>
 
-      <!-- 10 -->
-      <div class="section-block" id="cookies">
-        <span class="section-number">Section 10</span>
-        <h2 class="section-heading">Cookies</h2>
-        <p>Our Website may use cookies and similar tracking technologies to improve your experience. The types of cookies we may use include:</p>
-        <ul>
-          <li><strong>Essential cookies:</strong> Necessary for the Website to function properly. Cannot be disabled.</li>
-          <li><strong>Analytics cookies:</strong> Help us understand how visitors interact with our Website (e.g., Google Analytics, if enabled). Data is aggregated and anonymised where possible.</li>
-          <li><strong>Preference cookies:</strong> Remember your settings and preferences.</li>
-        </ul>
-        <p>You can control cookie settings through your browser. Disabling certain cookies may affect Website functionality. Where required by law, we will request your consent before placing non-essential cookies.</p>
-      </div>
-      <div class="doc-divider"></div>
-
-      <!-- 11 -->
-      <div class="section-block" id="children">
-        <span class="section-number">Section 11</span>
-        <h2 class="section-heading">Children's Privacy</h2>
-        <p>Our Website and services are not directed at children under the age of 18. We do not knowingly collect personal data from minors. If you believe a child has provided us with personal data without appropriate consent, please contact us immediately at info@orchidbyte-solutions.com.ng and we will delete it promptly.</p>
-        <p>For schools and educational institutions that engage our services (e.g., SchoolSync), any processing of student data is governed by a separate Data Processing Agreement (DPA) with the institution, which acts as the Data Controller for student records.</p>
-      </div>
-      <div class="doc-divider"></div>
-
-      <!-- 12 -->
-      <div class="section-block" id="third-party">
-        <span class="section-number">Section 12</span>
-        <h2 class="section-heading">Third-Party Links</h2>
-        <p>Our Website may contain links to third-party websites, social media platforms, or resources. This Privacy Policy applies only to our Website and services. We are not responsible for the privacy practices of third-party websites and encourage you to review their policies before providing any personal data.</p>
-      </div>
-      <div class="doc-divider"></div>
-
-      <!-- 13 -->
-      <div class="section-block" id="updates">
-        <span class="section-number">Section 13</span>
-        <h2 class="section-heading">Policy Updates</h2>
-        <p>We review this Privacy Policy periodically and may update it to reflect changes in our practices, technology, or legal requirements. The "Last Updated" date at the top of this page will reflect the most recent revision.</p>
-        <p>Where changes are material, we will take reasonable steps to notify you (for example, by email or a prominent notice on our Website). Your continued use of our Website or services after an update constitutes your acknowledgment of the revised Policy.</p>
-      </div>
-      <div class="doc-divider"></div>
-
-      <!-- 14 -->
+      <!-- Section 11: Contact -->
       <div class="section-block" id="contact-privacy">
-        <span class="section-number">Section 14</span>
-        <h2 class="section-heading">Contact Us</h2>
-        <p>For any questions, requests, or complaints about this Privacy Policy or how we handle your data, please reach us:</p>
+        <span class="section-number">Section 11</span>
+        <h2 class="section-heading">Privacy Office Contact</h2>
+        <p>For inquiries regarding data protection compliance, reach our designated privacy officers:</p>
         <ul>
           <li><strong>Email:</strong> info@orchidbyte-solutions.com.ng</li>
-          <li><strong>Subject line:</strong> "Privacy — orchidbyte"</li>
-          <li><strong>Address:</strong> OrchidByte Solutions & General Services, Kano, Nigeria</li>
-          <li><strong>Response time:</strong> Within 30 days of receipt</li>
+          <li><strong>Phone:</strong> +234 815 666 1246</li>
+          <li><strong>Corporate Registration:</strong> CAC BN: 9343571</li>
+          <li><strong>Supervisory Authority:</strong> National Information Technology Development Agency (NITDA) at nitda.gov.ng</li>
         </ul>
-        <p>You also have the right to lodge a complaint with the National Information Technology Development Agency (NITDA) — Nigeria's data protection supervisory authority — at <strong>nitda.gov.ng</strong>.</p>
       </div>
 
     </main>
   </div>
 </div>
 
-<footer>
-  <div class="footer-inner">
-    <p style="color:var(--text-muted);font-size:0.82rem;">© 2025 OrchidByte Solutions & General Services. All rights reserved.</p>
-    <div style="display:flex;gap:1.5rem;flex-wrap:wrap;">
-      <a href="index.html" style="color:var(--text-muted);font-size:0.78rem;text-decoration:none;" onmouseover="this.style.color='var(--orchid-light)'" onmouseout="this.style.color='var(--text-muted)'">Home</a>
-      <a href="privacy-policy.html" style="color:var(--orchid-light);font-size:0.78rem;text-decoration:none;">Privacy Policy</a>
-      <a href="terms.html" style="color:var(--text-muted);font-size:0.78rem;text-decoration:none;" onmouseover="this.style.color='var(--orchid-light)'" onmouseout="this.style.color='var(--text-muted)'">Terms of Service</a>
+<!-- Footer -->
+<footer style="padding:4rem 0 2rem;border-top:1px solid var(--border-subtle);background:var(--bg-surface);">
+  <div class="container flex flex-wrap justify-between items-center gap-4">
+    <p style="font-size:0.85rem;color:var(--text-muted);">
+      © 2025–2026 OrchidByte Solutions &amp; General Services (BN: 9343571). All rights reserved.
+    </p>
+    <div class="flex gap-4">
+      <a href="index.html" style="font-size:0.85rem;color:var(--text-muted);">Home</a>
+      <a href="projects.html" style="font-size:0.85rem;color:var(--text-muted);">Projects</a>
+      <a href="terms.html" style="font-size:0.85rem;color:var(--text-muted);">Terms of Service</a>
     </div>
   </div>
 </footer>
 
-<script>
-  function checkNav() {
-    const d = window.innerWidth >= 768;
-    document.getElementById('desktop-links').style.display = d ? 'flex' : 'none';
-    document.getElementById('menu-toggle').style.display = d ? 'none' : 'block';
-  }
-  checkNav(); window.addEventListener('resize', checkNav);
-  const mm = document.getElementById('mobile-menu');
-  document.getElementById('menu-toggle').addEventListener('click', () => mm.classList.add('open'));
-  document.getElementById('menu-close').addEventListener('click', () => mm.classList.remove('open'));
-</script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
