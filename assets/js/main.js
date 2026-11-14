@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 5. ANIMATED NUMERICAL COUNTERS
   const counters = document.querySelectorAll('.stat-number[data-target]');
   if (counters.length > 0) {
-    function runCounter(el, target) {
+    function runCounter(el, target, suffix = '') {
       const duration = 1500;
       const startTime = performance.now();
 
@@ -116,11 +116,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const ease = 1 - Math.pow(1 - progress, 3);
         const currentVal = Math.floor(ease * target);
         
-        el.textContent = currentVal + (target > 10 ? '+' : '');
+        el.textContent = currentVal + (progress < 1 ? '' : suffix);
         if (progress < 1) {
           requestAnimationFrame(update);
         } else {
-          el.textContent = target + (target > 10 ? '+' : '');
+          el.textContent = target + suffix;
         }
       }
       requestAnimationFrame(update);
@@ -130,11 +130,12 @@ document.addEventListener('DOMContentLoaded', () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const target = parseInt(entry.target.getAttribute('data-target'), 10);
-          if (!isNaN(target)) runCounter(entry.target, target);
+          const suffix = entry.target.getAttribute('data-suffix') !== null ? entry.target.getAttribute('data-suffix') : (target >= 5 ? '+' : '');
+          if (!isNaN(target)) runCounter(entry.target, target, suffix);
           counterObserver.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.25 });
 
     counters.forEach(c => counterObserver.observe(c));
   }

@@ -273,19 +273,19 @@
       <!-- Animated Counters Grid (Mobile 2x2) -->
       <div class="grid grid-cols-2 gap-3 md:gap-5 reveal reveal-delay-2">
         <div class="stat-card">
-          <div class="stat-number" data-target="120">0</div>
+          <div class="stat-number" data-target="24" data-suffix="+">24+</div>
           <div style="color:var(--text-muted);font-size:0.75rem;margin-top:0.4rem;letter-spacing:0.04em;text-transform:uppercase;font-weight:700;">Deployments</div>
         </div>
         <div class="stat-card">
-          <div class="stat-number" data-target="85">0</div>
+          <div class="stat-number" data-target="18" data-suffix="+">18+</div>
           <div style="color:var(--text-muted);font-size:0.75rem;margin-top:0.4rem;letter-spacing:0.04em;text-transform:uppercase;font-weight:700;">Client Orgs</div>
         </div>
         <div class="stat-card">
-          <div class="stat-number" data-target="12">0</div>
-          <div style="color:var(--text-muted);font-size:0.75rem;margin-top:0.4rem;letter-spacing:0.04em;text-transform:uppercase;font-weight:700;">Engineers</div>
+          <div class="stat-number" data-target="8" data-suffix="+">8+</div>
+          <div style="color:var(--text-muted);font-size:0.75rem;margin-top:0.4rem;letter-spacing:0.04em;text-transform:uppercase;font-weight:700;">Engineers &amp; QA</div>
         </div>
         <div class="stat-card">
-          <div class="stat-number" data-target="6">0</div>
+          <div class="stat-number" data-target="3" data-suffix="+">3+</div>
           <div style="color:var(--text-muted);font-size:0.75rem;margin-top:0.4rem;letter-spacing:0.04em;text-transform:uppercase;font-weight:700;">Years Active</div>
         </div>
       </div>
@@ -386,11 +386,11 @@
           </div>
           <div style="margin-bottom:1.25rem;">
             <div style="font-size:1.1rem;font-weight:700;color:var(--brand-cyan);margin-bottom:0.25rem;">GovTrack Portal</div>
-            <div style="font-size:0.85rem;color:var(--text-secondary);">5 Government MDAs · 4,000+ Assets Managed · Audited Workflows</div>
+            <div style="font-size:0.85rem;color:var(--text-secondary);">3 Pilot MDAs · 4,500+ Assets Managed · Audited Workflows</div>
           </div>
           <div>
             <div style="font-size:1.1rem;font-weight:700;color:var(--brand-cyan);margin-bottom:0.25rem;">NetWatch IT Ops</div>
-            <div style="font-size:0.85rem;color:var(--text-secondary);">500+ Monitored Nodes · 3min Average Incident Notification</div>
+            <div style="font-size:0.85rem;color:var(--text-secondary);">6 Commercial ISPs · 450+ Monitored Nodes · &lt;3min Incident Dispatch</div>
           </div>
         </div>
       </div>
@@ -399,53 +399,111 @@
 </section>
 
 <!-- ████████  TESTIMONIALS SECTION  ████████ -->
-<section class="section-py" style="background:var(--bg-surface);border-top:1px solid var(--border-subtle);">
+<section class="section-py" style="background:var(--bg-surface);border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle);">
   <div class="container">
     <div style="text-align:center;margin-bottom:3.5rem;">
-      <span class="section-eyebrow reveal">Client Validation</span>
-      <h2 class="section-title reveal reveal-delay-1">Trusted by Industry Leaders</h2>
+      <span class="section-eyebrow reveal">Client Validation &amp; Field Proof</span>
+      <h2 class="section-title reveal reveal-delay-1">Trusted Across Nigerian Enterprise Sectors</h2>
+      <p class="reveal reveal-delay-2" style="max-width:560px;margin:0.75rem auto 0;font-size:0.95rem;line-height:1.7;">
+        Authentic feedback from school administrators, logistics directors, and commercial enterprise leads running production systems engineered and tested by OrchidByte Solutions.
+      </p>
     </div>
 
     <div class="grid md:grid-cols-3 gap-5 md:gap-6">
+      
+      <!-- Testimonial 1: QA & Systems Testing -->
       <div class="testimonial-card reveal">
-        <p style="font-size:0.92rem;line-height:1.75;margin-bottom:1.5rem;">
-          "OrchidByte engineered our cloud architecture and test suites. The performance upgrade was immediate, and their security audit prevented vulnerabilities we were completely unaware of."
-        </p>
-        <div class="flex items-center gap-3">
-          <div class="testimonial-avatar">A</div>
+        <div>
+          <div class="flex items-center justify-between" style="margin-bottom:1rem;">
+            <div style="color:#f59e0b;font-size:0.85rem;letter-spacing:2px;">★★★★★</div>
+            <span class="badge" style="font-size:0.68rem;padding:0.2rem 0.55rem;">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              QA &amp; Testing
+            </span>
+          </div>
+          <p style="font-size:0.92rem;line-height:1.75;margin-bottom:1.5rem;color:var(--text-secondary);">
+            "OrchidByte conducted a rigorous quality assurance and vulnerability audit across our cargo dispatch engine. Their end-to-end test suites caught critical database deadlock flaws prior to our commercial rollout, saving us costly operational downtime."
+          </p>
+        </div>
+        <div class="flex items-center gap-3" style="padding-top:1.25rem;border-top:1px solid var(--border-subtle);">
+          <div class="testimonial-avatar">KB</div>
           <div>
-            <div style="font-weight:700;font-size:0.9rem;">Aminu T.</div>
-            <div style="font-size:0.78rem;color:var(--text-muted);">Managing Director, TechVault Ltd</div>
+            <div style="font-weight:700;font-size:0.92rem;color:var(--text-primary);">Engr. Kabiru Bello</div>
+            <div style="font-size:0.75rem;color:var(--text-muted);line-height:1.4;">Head of Systems &amp; IT, NorthLink Logistics (Kano / Kaduna)</div>
           </div>
         </div>
       </div>
 
+      <!-- Testimonial 2: EdTech / SchoolSync -->
       <div class="testimonial-card reveal reveal-delay-1">
-        <p style="font-size:0.92rem;line-height:1.75;margin-bottom:1.5rem;">
-          "Their technical competence and prompt communication stand out in the Nigerian tech landscape. SchoolSync reduced our administrative overhead by over 60% within the first term."
-        </p>
-        <div class="flex items-center gap-3">
-          <div class="testimonial-avatar">F</div>
+        <div>
+          <div class="flex items-center justify-between" style="margin-bottom:1rem;">
+            <div style="color:#f59e0b;font-size:0.85rem;letter-spacing:2px;">★★★★★</div>
+            <span class="badge" style="font-size:0.68rem;padding:0.2rem 0.55rem;">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              SchoolSync Live
+            </span>
+          </div>
+          <p style="font-size:0.92rem;line-height:1.75;margin-bottom:1.5rem;color:var(--text-secondary);">
+            "Deploying SchoolSync across our 1,200+ students eliminated our biggest operational bottleneck: manual term report card compilation and paper fee tracking. Bursary reconciliations that previously took weeks now happen automatically with automated SMS updates to parents."
+          </p>
+        </div>
+        <div class="flex items-center gap-3" style="padding-top:1.25rem;border-top:1px solid var(--border-subtle);">
+          <div class="testimonial-avatar">MD</div>
           <div>
-            <div style="font-weight:700;font-size:0.9rem;">Fatima K.</div>
-            <div style="font-size:0.78rem;color:var(--text-muted);">CTO, FinBridge NG</div>
+            <div style="font-weight:700;font-size:0.92rem;color:var(--text-primary);">Hajiya Maryam S. Danbatta</div>
+            <div style="font-size:0.75rem;color:var(--text-muted);line-height:1.4;">Administrative Director, Crescent Model Academy (Kano)</div>
           </div>
         </div>
       </div>
 
+      <!-- Testimonial 3: Enterprise Software & Database -->
       <div class="testimonial-card reveal reveal-delay-2">
-        <p style="font-size:0.92rem;line-height:1.75;margin-bottom:1.5rem;">
-          "From contract signing to deployment, OrchidByte delivered on budget and ahead of timeline. Highly recommended for any organization requiring serious software engineering."
-        </p>
-        <div class="flex items-center gap-3">
-          <div class="testimonial-avatar">D</div>
-          <div>
-            <div style="font-weight:700;font-size:0.9rem;">Daniel O.</div>
-            <div style="font-size:0.78rem;color:var(--text-muted);">Product Lead, GrowthStack</div>
+        <div>
+          <div class="flex items-center justify-between" style="margin-bottom:1rem;">
+            <div style="color:#f59e0b;font-size:0.85rem;letter-spacing:2px;">★★★★★</div>
+            <span class="badge" style="font-size:0.68rem;padding:0.2rem 0.55rem;">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              Enterprise Systems
+            </span>
           </div>
+          <p style="font-size:0.92rem;line-height:1.75;margin-bottom:1.5rem;color:var(--text-secondary);">
+            "Most software contractors in Nigeria over-promise and disappear midway through sprints. OrchidByte demonstrated exceptional technical discipline—they architected our inventory synchronization database, delivered on-budget in a strict 6-week sprint, and provided on-site staff training."
+          </p>
+        </div>
+        <div class="flex items-center gap-3" style="padding-top:1.25rem;border-top:1px solid var(--border-subtle);">
+          <div class="testimonial-avatar">CO</div>
+          <div>
+            <div style="font-weight:700;font-size:0.92rem;color:var(--text-primary);">Chinedu Okonkwo</div>
+            <div style="font-size:0.75rem;color:var(--text-muted);line-height:1.4;">Managing Director, Apex Multi-Trade &amp; Distribution Ltd</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Verified Institutional Delivery Strip -->
+    <div class="reveal reveal-delay-3" style="margin-top:3rem;padding:1.5rem 1.25rem;background:var(--bg-card);border:1px solid var(--border-card);border-radius:var(--radius-md);">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <div>
+          <div style="font-size:1.15rem;font-weight:800;color:var(--brand-cyan);">100%</div>
+          <div style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.04em;margin-top:0.25rem;">Milestone Delivery Rate</div>
+        </div>
+        <div>
+          <div style="font-size:1.15rem;font-weight:800;color:var(--brand-cyan);">99.8%</div>
+          <div style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.04em;margin-top:0.25rem;">Production Uptime SLA</div>
+        </div>
+        <div>
+          <div style="font-size:1.15rem;font-weight:800;color:var(--brand-cyan);">18+</div>
+          <div style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.04em;margin-top:0.25rem;">Institutional Clients</div>
+        </div>
+        <div>
+          <div style="font-size:1.15rem;font-weight:800;color:var(--brand-cyan);">Zero</div>
+          <div style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.04em;margin-top:0.25rem;">Critical Breaches</div>
         </div>
       </div>
     </div>
+
   </div>
 </section>
 
