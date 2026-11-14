@@ -8,3 +8,8 @@ package-lock.json
 Thumbs.db
 
 *.zip
+
+# Child development repositories
+fimrash-logistics/
+fimrash_logistics/
+
