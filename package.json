@@ -1,0 +1,13 @@
+{
+  "name": "orchidbyte-solutions",
+  "version": "1.0.0",
+  "description": "OrchidByte Solutions & General Services — Enterprise Technology, Innovation & Solutions",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'Development server' && python3 -m http.server 8000 || php -S localhost:8000",
+    "build": "echo 'No build step required for static site'"
+  },
+  "dependencies": {
+    "@vercel/speed-insights": "^1.0.12"
+  }
+}
